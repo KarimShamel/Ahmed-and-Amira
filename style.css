@@ -321,6 +321,14 @@ body{
 /* =======================
    VIDEO
 ======================= */
+.arabic-title{
+    font-family:'Aref Ruqaa', serif;
+    font-size:4rem;
+    color:var(--coral);
+    text-align:center;
+    margin-bottom:35px;
+    direction:rtl;
+}
 
 .video-section{
     padding:100px 20px;
