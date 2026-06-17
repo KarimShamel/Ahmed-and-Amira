@@ -15,7 +15,7 @@
 <body>
 
     <!-- Background Music -->
-    <audio id="bgMusic" loop>
+    <audio id="bgMusic" preload="auto" loop>
         <source src="music.mp3" type="audio/mpeg">
     </audio>
 
@@ -44,7 +44,30 @@
 
     <!-- Music Button -->
     <button id="musicToggle" class="music-btn hidden">
-        ♪
+        const audio = document.getElementById("bgMusic");
+
+openBtn.addEventListener("click", async () => {
+
+    gate.classList.add("hide");
+
+    musicToggle.classList.remove("hidden");
+
+    try {
+        audio.volume = 0.5;
+        await audio.play();
+
+        musicToggle.classList.add("playing");
+        musicToggle.innerHTML = "🎵";
+
+        console.log("Audio started");
+
+    } catch(err) {
+
+        console.error("Audio failed:", err);
+
+        musicToggle.innerHTML = "🔇";
+    }
+});
     </button>
 
     <!-- Main Content -->
@@ -129,7 +152,7 @@
         <!-- Video -->
         <section class="video-section fade-section">
 
-            <h2>Our Story</h2>
+            <h2>Our Engagement Party</h2>
 
             <div class="video-container">
 
