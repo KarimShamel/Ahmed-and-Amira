@@ -44,30 +44,7 @@
 
     <!-- Music Button -->
     <button id="musicToggle" class="music-btn hidden">
-        const audio = document.getElementById("bgMusic");
-
-openBtn.addEventListener("click", async () => {
-
-    gate.classList.add("hide");
-
-    musicToggle.classList.remove("hidden");
-
-    try {
-        audio.volume = 0.5;
-        await audio.play();
-
-        musicToggle.classList.add("playing");
-        musicToggle.innerHTML = "🎵";
-
-        console.log("Audio started");
-
-    } catch(err) {
-
-        console.error("Audio failed:", err);
-
-        musicToggle.innerHTML = "🔇";
-    }
-});
+         🎵
     </button>
 
     <!-- Main Content -->
