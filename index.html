@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed & Amira | Wedding Invitation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Sparkles -->
+    <div class="sparkles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Entry Screen -->
+    <div id="gate" class="gate">
+        <div class="gate-content">
+            <h2>The Wedding Of</h2>
+            <h1>Ahmed & Amira</h1>
+            <p>We joyfully invite you to celebrate our special day</p>
+
+            <button id="openInvitation" class="open-btn">
+                Open Invitation
+            </button>
+        </div>
+    </div>
+
+    <!-- Music Button -->
+    <button id="musicToggle" class="music-btn hidden">
+        ♪
+    </button>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+
+        <!-- Hero -->
+        <section class="hero fade-section">
+            <div class="hero-content">
+                <p class="small-title">Together With Their Families</p>
+
+                <h1>Ahmed</h1>
+
+                <div class="ampersand">&</div>
+
+                <h1>Amira</h1>
+
+                <p class="tagline">
+                    Two Hearts • One Love • A Lifetime Together
+                </p>
+            </div>
+        </section>
+
+        <!-- Details -->
+        <section class="details-section fade-section">
+            <div class="details-card">
+
+                <h2>Wedding Celebration</h2>
+
+                <div class="detail">
+                    <span>📅 Date</span>
+                    <strong>September 7, 2026</strong>
+                </div>
+
+                <div class="detail">
+                    <span>🕖 Time</span>
+                    <strong>7:00 PM – 12:00 AM</strong>
+                </div>
+
+                <div class="detail">
+                    <span>📍 Venue</span>
+                    <strong>Ain al Hayat Resort</strong>
+                </div>
+
+                <a
+                    href="https://maps.app.goo.gl/o5THggaqjLpbVfVj6?g_st=iw"
+                    target="_blank"
+                    class="map-btn"
+                >
+                    View Location on Map
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery-section fade-section">
+
+            <h2>Our Moments</h2>
+
+            <div class="gallery-grid">
+
+                <div class="photo-card">
+                    <img src="photo1.jpg" alt="Couple Photo 1">
+                </div>
+
+                <div class="photo-card">
+                    <img src="photo2.jpg" alt="Couple Photo 2">
+                </div>
+
+                <div class="photo-card">
+                    <img src="photo3.jpg" alt="Couple Photo 3">
+                </div>
+
+                <div class="photo-card">
+                    <img src="photo4.jpg" alt="Couple Photo 4">
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Video -->
+        <section class="video-section fade-section">
+
+            <h2>Our Story</h2>
+
+            <div class="video-container">
+
+                <video controls poster="video-thumbnail.jpg">
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer fade-section">
+            <h2>We Can't Wait To Celebrate With You</h2>
+            <p>Ahmed & Amira</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
