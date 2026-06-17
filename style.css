@@ -1,0 +1,439 @@
+:root{
+    --pink:#ffdbe7;
+    --pink-dark:#ff8eb3;
+    --coral:#ff7d9d;
+    --gold:#f6c453;
+    --white:#ffffff;
+    --text:#4b4453;
+    --shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:var(--text);
+    background:
+    radial-gradient(circle at top left,#fff8fb,#ffeef5),
+    #ffffff;
+    overflow-x:hidden;
+}
+
+/* =======================
+   GATE SCREEN
+======================= */
+
+.gate{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ffd7e7,
+    #fff6fa,
+    #ffe4ee
+    );
+
+    transition:1.2s ease;
+}
+
+.gate.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.gate-content{
+    text-align:center;
+    padding:30px;
+    animation:float 4s ease-in-out infinite;
+}
+
+.gate h2{
+    font-family:'Playfair Display',serif;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.gate h1{
+    font-family:'Great Vibes',cursive;
+    font-size:5rem;
+    color:var(--coral);
+    margin-bottom:15px;
+}
+
+.gate p{
+    margin-bottom:30px;
+}
+
+.open-btn{
+    border:none;
+    cursor:pointer;
+    padding:18px 40px;
+    border-radius:50px;
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--coral),
+    var(--gold)
+    );
+
+    box-shadow:0 10px 25px rgba(255,126,157,.4);
+
+    transition:.3s;
+}
+
+.open-btn:hover{
+    transform:translateY(-4px);
+}
+
+/* =======================
+   HERO
+======================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.small-title{
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:6rem;
+    color:var(--coral);
+}
+
+.ampersand{
+    font-size:3rem;
+    color:var(--gold);
+    margin:10px 0;
+}
+
+.tagline{
+    margin-top:20px;
+    font-size:1.1rem;
+}
+
+/* =======================
+   DETAILS
+======================= */
+
+.details-section{
+    padding:100px 20px;
+}
+
+.details-card{
+    max-width:700px;
+    margin:auto;
+
+    background:white;
+    padding:45px;
+    border-radius:30px;
+    box-shadow:var(--shadow);
+
+    text-align:center;
+}
+
+.details-card h2{
+    font-family:'Playfair Display',serif;
+    margin-bottom:35px;
+}
+
+.detail{
+    margin:18px 0;
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.map-btn{
+    display:inline-block;
+    margin-top:35px;
+    text-decoration:none;
+    color:white;
+
+    padding:15px 30px;
+    border-radius:40px;
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--coral),
+    var(--gold)
+    );
+
+    transition:.3s;
+}
+
+.map-btn:hover{
+    transform:translateY(-4px);
+}
+
+/* =======================
+   GALLERY
+======================= */
+
+.gallery-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.gallery-section h2{
+    margin-bottom:40px;
+    font-family:'Playfair Display',serif;
+}
+
+.gallery-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.photo-card{
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+}
+
+.photo-card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.photo-card:hover img{
+    transform:scale(1.08);
+}
+
+/* =======================
+   VIDEO
+======================= */
+
+.video-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.video-section h2{
+    margin-bottom:35px;
+    font-family:'Playfair Display',serif;
+}
+
+.video-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.video-container video{
+    width:100%;
+    border-radius:30px;
+    box-shadow:var(--shadow);
+}
+
+/* =======================
+   FOOTER
+======================= */
+
+.footer{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.footer h2{
+    font-family:'Great Vibes',cursive;
+    font-size:3rem;
+    color:var(--coral);
+}
+
+/* =======================
+   MUSIC BUTTON
+======================= */
+
+.music-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+
+    width:65px;
+    height:65px;
+    border:none;
+    border-radius:50%;
+
+    font-size:28px;
+    cursor:pointer;
+
+    background:white;
+    box-shadow:var(--shadow);
+
+    z-index:1000;
+}
+
+.music-btn.playing{
+    animation:spin 5s linear infinite;
+}
+
+.hidden{
+    display:none;
+}
+
+/* =======================
+   SCROLL ANIMATION
+======================= */
+
+.fade-section{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s ease;
+}
+
+.fade-section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =======================
+   SPARKLES
+======================= */
+
+.sparkles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:1;
+}
+
+.sparkles span{
+    position:absolute;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--gold);
+
+    animation:floatSparkle linear infinite;
+}
+
+.sparkles span:nth-child(1){
+    left:10%;
+    animation-duration:8s;
+}
+
+.sparkles span:nth-child(2){
+    left:25%;
+    animation-duration:12s;
+}
+
+.sparkles span:nth-child(3){
+    left:45%;
+    animation-duration:9s;
+}
+
+.sparkles span:nth-child(4){
+    left:65%;
+    animation-duration:14s;
+}
+
+.sparkles span:nth-child(5){
+    left:80%;
+    animation-duration:11s;
+}
+
+.sparkles span:nth-child(6){
+    left:95%;
+    animation-duration:10s;
+}
+
+/* =======================
+   ANIMATIONS
+======================= */
+
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+@keyframes floatSparkle{
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    90%{
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-10vh);
+        opacity:0;
+    }
+}
+
+/* =======================
+   MOBILE
+======================= */
+
+@media(max-width:768px){
+
+    .gate h1{
+        font-size:3.6rem;
+    }
+
+    .hero h1{
+        font-size:4rem;
+    }
+
+    .details-card{
+        padding:30px;
+    }
+
+    .detail{
+        flex-direction:column;
+    }
+}
