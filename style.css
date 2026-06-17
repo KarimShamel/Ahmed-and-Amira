@@ -197,6 +197,88 @@ body{
 }
 
 /* =======================
+   COUNTDOWN
+======================= */
+
+.countdown-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.countdown-section h2{
+    font-family:'Playfair Display',serif;
+    font-size:2.5rem;
+    color:var(--coral);
+    margin-bottom:40px;
+}
+
+.countdown-container{
+    max-width:1000px;
+    margin:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    flex-wrap:wrap;
+
+    background:rgba(255,255,255,.45);
+    backdrop-filter:blur(12px);
+
+    padding:40px;
+    border-radius:40px;
+}
+
+.time-box{
+    background:white;
+    min-width:150px;
+    padding:30px 20px;
+
+    border-radius:30px;
+    box-shadow:var(--shadow);
+
+    transition:.4s ease;
+}
+
+.time-box:hover{
+    transform:translateY(-8px);
+}
+
+.time-box span{
+    display:block;
+    font-size:4rem;
+    font-weight:700;
+    line-height:1;
+    color:var(--coral);
+}
+
+.time-box p{
+    margin-top:12px;
+    font-size:1rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--text);
+}
+
+.countdown-heart{
+    margin-top:35px;
+    font-size:2rem;
+    color:var(--pink-dark);
+    animation:pulseHeart 2s infinite;
+}
+
+@keyframes pulseHeart{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.15);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+/* =======================
    GALLERY
 ======================= */
 
